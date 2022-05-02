@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"net/url"
 	"strconv"
-	"upbit-go/types"
-	"upbit-go/util"
+
+	"github.com/kecheon/upbit-go/types"
+	"github.com/kecheon/upbit-go/util"
 
 	"github.com/dgrijalva/jwt-go"
 )

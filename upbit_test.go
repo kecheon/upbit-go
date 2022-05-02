@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"upbit-go/util"
+	"github.com/kecheon/upbit-go/util"
 )
 
 var client *Client
