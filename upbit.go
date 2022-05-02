@@ -4,11 +4,10 @@ import (
 	"fmt"
 	"net/url"
 	"strconv"
+	"upbit-go/types"
+	"upbit-go/util"
 
 	"github.com/dgrijalva/jwt-go"
-
-	"github.com/hannut91/upbit-go/types"
-	"github.com/hannut91/upbit-go/util"
 )
 
 const (
