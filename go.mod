@@ -1,4 +1,4 @@
-module github.com/kecheon/upbit-go
+module upbit-go
 
 go 1.18
 
