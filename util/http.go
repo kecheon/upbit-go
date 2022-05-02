@@ -2,6 +2,7 @@ package util
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -46,6 +47,12 @@ func Request(options *RequestOptions, result interface{}) (
 	if err != nil {
 		fmt.Println(err)
 		return
+	} else {
+		if res.StatusCode >= 400 {
+			fmt.Println(res)
+			// 이새끼덜 넘 불친절하네 이유도 업시 400이냐?
+			return errors.New("Response Error status_code " + res.Status)
+		}
 	}
 
 	defer res.Body.Close()

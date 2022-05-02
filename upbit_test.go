@@ -200,21 +200,19 @@ func TestSellAndCancel(t *testing.T) {
 		"ask",
 		"KRW-BTC",
 		"80000000",
-		"0.001",
+		"0.0001",
 		"limit",
 	)
 	if err != nil {
-		log.Panicln(err)
+		t.Errorf("매도 주문 실패 %q", order)
 	}
 
 	fmt.Println(order)
-	uuid := order
 
-	time.Sleep(time.Second * 5)
-
+	time.Sleep(time.Second * 1)
 	cancel, err := client.CancelOrder(order.Uuid)
 	fmt.Println(cancel)
 	if err != nil {
-		t.Errorf("주문 취소 실패 %s", uuid)
+		t.Errorf("주문 취소 실패 %s", order.Uuid)
 	}
 }

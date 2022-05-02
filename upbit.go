@@ -324,7 +324,6 @@ func (client *Client) Order(
 	}
 
 	err = util.Request(options, &order)
-	fmt.Println(err)
 	return
 }
 
